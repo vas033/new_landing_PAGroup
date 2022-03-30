@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Visby Medium Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Visby Medium Italic'), url('./src/fonts/VisbyMedium\ Italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Visby Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Visby Medium'), url('./src/fonts/VisbyMedium.woff') format('woff');
+}
+
+body {
+    color: #FFF;
+    background-color: #0A0A22;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+a {
+    color: unset;
+}
+
+p {
+    margin-block-start: unset;
+    margin-block-end: unset;
+    margin-inline-start: unset;
+    margin-inline-end: unset;
+}

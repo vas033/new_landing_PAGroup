@@ -1,0 +1,39 @@
+@keyframes strokeOffset {
+    0% {
+        stroke-dashoffset: 505%
+    }
+    100% {
+        stroke-dashoffset: 128%
+    }
+}
+
+.container {
+    position: relative;
+    margin-left: 208px;
+    margin-right: 208px;
+}
+
+.imageAnimContainer,
+.mainContentContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.imageAnim {
+    animation: strokeOffset 10s linear infinite;
+}
+
+.mainContentContainer {
+    padding: 62px 77px 79px 77px;
+}
+
+.title {
+    font-family: 'IBM Plex Mono';
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 133%;
+    letter-spacing: -0.02em;
+}

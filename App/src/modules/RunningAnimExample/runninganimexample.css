@@ -1,0 +1,12 @@
+@keyframes strokeOffset {
+    0% {
+        stroke-dashoffset: 505%
+    }
+    100% {
+        stroke-dashoffset: 312%
+    }
+}
+
+.anim {
+    animation: strokeOffset 10s linear infinite;
+}

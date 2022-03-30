@@ -1,0 +1,14 @@
+.headerLogoDiv {
+    display: flex;
+    align-items: center;
+}
+
+.headerLogo {
+    margin-right: 15px;
+}
+
+.logoTitle {
+    font-family: 'Visby Medium Italic';
+    font-size: 16px;
+    line-height: 125%;
+}

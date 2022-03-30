@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    font-family: 'Visby Medium';
+    font-size: 16px;
+    line-height: 160%;
+}
+
+.navLink {
+    margin-right: 32px;
+    overflow: hidden;
+}
+
+.langBtn {
+    display: inline;
+    padding: 0;
+}
+
+.langBtn:hover {
+    cursor: pointer;
+}
+
+.active,
+.navLink:hover {
+    color: #96ADFF;
+}
