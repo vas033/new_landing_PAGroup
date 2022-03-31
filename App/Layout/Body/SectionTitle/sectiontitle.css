@@ -7,8 +7,18 @@
     }
 }
 
+@keyframes opacityTextCursor {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 .container {
     position: relative;
+    margin-top: 131px;
     margin-left: 208px;
     margin-right: 208px;
 }
@@ -31,9 +41,23 @@
 }
 
 .title {
-    font-family: 'IBM Plex Mono';
     font-size: 48px;
     font-weight: 400;
     line-height: 133%;
     letter-spacing: -0.02em;
+}
+
+.codeAround {
+    color: #3D67FF;
+}
+
+.code {
+    margin-right: 2px;
+}
+
+.code:after {
+    content: '';
+    margin-right: 3px;
+    border: 2px solid red;
+    animation: opacityTextCursor .5s ease-out infinite;
 }

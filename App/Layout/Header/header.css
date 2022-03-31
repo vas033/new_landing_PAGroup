@@ -1,4 +1,8 @@
 .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     padding-left: 208px;
     padding-right: 208px;
     margin-top: 27.5px;
