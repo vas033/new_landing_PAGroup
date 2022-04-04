@@ -1,0 +1,20 @@
+.container {
+    width: 57%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title,
+.desc {
+    line-height: 160%;
+}
+
+.title {
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.desc {
+    font-size: 16px;
+    letter-spacing: -0.02em;
+}

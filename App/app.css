@@ -32,7 +32,10 @@ a {
     color: unset;
 }
 
-p {
+p,
+h1,
+h2,
+h3 {
     margin-block-start: unset;
     margin-block-end: unset;
     margin-inline-start: unset;

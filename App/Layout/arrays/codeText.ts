@@ -1,5 +1,5 @@
 const codeText = [
-        'BLOCKHAIN',
+        'BLOCKCHAIN',
         'САЙТЫ',
         'ГОЛОСОВЫЕ ИНТЕРФЕЙСЫ',
         'ВЕБ-ПРОЕКТЫ',

@@ -1,0 +1,97 @@
+.container {
+    position: relative;
+    padding: 33px 40px 33px 160px;
+    background-color: rgba(109, 122, 168, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+}
+
+.img svg {
+    width: 80px!important;
+    height: 80px!important;
+}
+
+.title,
+.linkMore {
+    line-height: 100%;
+}
+
+.title,
+.desc {
+    margin-bottom: 16px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.desc {
+    color: #6D7AA8;
+    font-size: 18px;
+    line-height: 156%;
+}
+
+.linkMore {
+    color: #3D67FF;
+    font-size: 22px;
+}
+
+.blockchain svg,
+.cyber svg {
+    background: radial-gradient(rgba(61, 103, 255, 0.16), transparent 80%);
+}
+
+.vision svg,
+.admin svg {
+    background: radial-gradient(rgba(61, 255, 220, 0.16), transparent 80%);
+}
+
+.web svg,
+.outstaff svg {
+    background: radial-gradient(rgba(255, 61, 61, 0.16), transparent 80%);
+}
+
+.blockchain path,
+.vision path,
+.web path,
+.outstaff path,
+.cyber>svg>g>g:nth-child(1)>g>path,
+.cyber>svg>g>g:nth-child(2)>g>path,
+.admin path {
+    stroke: #fff
+}
+
+.blockchain g:nth-child(4n+1) path,
+.cyber path {
+    stroke: #3d67ff
+}
+
+.vision g:first-child g:first-child path,
+.admin>svg>g>g:nth-child(3)>g>g>path {
+    stroke: #3dffdc
+}
+
+.web g g g:nth-child(1) path {
+    stroke: #ff3d3d;
+}
+
+.web g g g:nth-child(3) path {
+    fill: #ff3d3d;
+}
+
+.outstaff>svg>g>g:nth-child(7)>g>path,
+.outstaff>svg>g>g:nth-child(1)>g>path,
+.outstaff>svg>g>g:nth-child(2)>g>path,
+.outstaff>svg>g>g:nth-child(3)>g>path {
+    stroke: #ff3d9a
+}
+
+.container:hover .linkMore,
+.container:active .linkMore {
+    border-bottom: 1px solid #3D67FF;
+}
+
+.container:active {
+    background: rgba(55, 62, 86, 0.1);
+}

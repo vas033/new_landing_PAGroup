@@ -1,0 +1,96 @@
+@keyframes strokeOffsetLine1 {
+    0% {
+        stroke-dashoffset: 150%
+    }
+    100% {
+        stroke-dashoffset: 0%
+    }
+}
+
+@keyframes strokeOffsetLine2 {
+    0% {
+        stroke-dashoffset: 505%
+    }
+    100% {
+        stroke-dashoffset: 312%
+    }
+}
+
+.section {
+    position: relative;
+}
+
+.line1,
+.line1anim,
+.line2,
+.line2anim,
+.line3,
+.line3anim,
+.container {
+    position: absolute;
+}
+
+.line1 {
+    top: 110px;
+}
+
+.line2 {
+    left: 63%;
+}
+
+.line3 {
+    top: 716px;
+}
+
+.line1anim,
+.line2anim,
+.line3anim,
+.container {
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.line1anim,
+.line2anim,
+.line3anim {
+    bottom: 0;
+}
+
+.line1anim path,
+.line3anim path {
+    animation: strokeOffsetLine1 2s linear infinite;
+}
+
+.line2anim path {
+    animation: strokeOffsetLine2 2s linear infinite;
+}
+
+.container {
+    padding: 151px 208px 115px 208px;
+}
+
+.title {
+    margin-bottom: 60px;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 112%;
+    letter-spacing: -0.02em;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content a {
+    flex: 0 0 35.6%;
+}
+
+.content a:nth-child(-2n+5) {
+    margin-right: 32px;
+}
+
+.content a:nth-child(-n+4) {
+    margin-bottom: 32px;
+}

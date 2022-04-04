@@ -7,15 +7,6 @@
     }
 }
 
-@keyframes opacityTextCursor {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
 .container {
     position: relative;
     margin-top: 131px;
@@ -38,26 +29,31 @@
 
 .mainContentContainer {
     padding: 62px 77px 79px 77px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title,
+.desc {
+    letter-spacing: -0.02em;
 }
 
 .title {
     font-size: 48px;
     font-weight: 400;
     line-height: 133%;
-    letter-spacing: -0.02em;
 }
 
 .codeAround {
     color: #3D67FF;
 }
 
-.code {
-    margin-right: 2px;
+.cursor {
+    color: red;
 }
 
-.code:after {
-    content: '';
-    margin-right: 3px;
-    border: 2px solid red;
-    animation: opacityTextCursor .5s ease-out infinite;
+.desc {
+    font-size: 20px;
+    line-height: 160%;
 }
