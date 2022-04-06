@@ -12,6 +12,7 @@ export function About() {
       desc={el.description} 
       key={aboutArr.indexOf(el)} 
       clTitle={styles.title}
+      clDesc={styles.desc}
       />
       )}
     </div>

@@ -1,0 +1,25 @@
+.container {
+    padding: 151px 208px 157px 208px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title {
+    margin-bottom: 112px;
+}
+
+.title span {
+    color: #3D67FF;
+}
+
+.container div {
+    flex: 0 0 48%;
+}
+
+.container>div:not(:last-child) {
+    margin-right: 28px;
+}
+
+.container div:not(:nth-child(n+4)) {
+    margin-bottom: 72px;
+}

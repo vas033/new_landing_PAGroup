@@ -1,0 +1,74 @@
+@keyframes circleAnim {
+    25%,
+    100% {
+        stroke-dasharray: 270%;
+        stroke-dashoffset: 270%;
+    }
+}
+
+@keyframes lineAnim {
+    99%,
+    100% {
+        stroke-dashoffset: 100%;
+    }
+}
+
+.container {
+    width: fit-content;
+}
+
+.container {
+    position: relative;
+}
+
+.imgContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    display: flex;
+    align-items: flex-end;
+}
+
+.imgContainer .imgContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.circle,
+.line,
+.circleAnim,
+.lineAnim {
+    display: inline-block;
+}
+
+.line,
+.lineAnim {
+    padding-bottom: 11px;
+}
+
+.circleAnim path {
+    animation: circleAnim 4s linear infinite;
+}
+
+.lineAnim path {
+    animation: lineAnim 4s linear infinite;
+}
+
+.content {
+    display: flex;
+}
+
+.title {
+    flex: 0 0 28%;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 140%;
+}
+
+.desc {
+    padding-top: 24px;
+    flex: 0 0 70%;
+}

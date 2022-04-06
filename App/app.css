@@ -30,6 +30,7 @@ a {
 button,
 a {
     color: unset;
+    cursor: pointer;
 }
 
 p,
@@ -40,4 +41,16 @@ h3 {
     margin-block-end: unset;
     margin-inline-start: unset;
     margin-inline-end: unset;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 112%;
+    letter-spacing: -0.02em;
+}
+
+p {
+    font-size: 18px;
+    line-height: 156%;
 }
