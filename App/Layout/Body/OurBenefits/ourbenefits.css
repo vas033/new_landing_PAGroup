@@ -1,0 +1,26 @@
+.container {
+    padding: 215px 208px 294px 208px;
+}
+
+.benefits {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.section {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 350px 350px;
+}
+
+.cardsContainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.title {
+    margin-bottom: 169px;
+}

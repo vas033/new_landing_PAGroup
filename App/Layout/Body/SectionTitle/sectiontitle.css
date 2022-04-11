@@ -28,7 +28,7 @@
 }
 
 .mainContentContainer {
-    padding: 62px 77px 79px 77px;
+    padding: 62px 183px 79px 77px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -56,4 +56,33 @@
 .desc {
     font-size: 20px;
     line-height: 160%;
+}
+
+.bottomDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    position: relative;
+}
+
+.btn span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover .shadow,
+.btn:active .shadow {
+    filter: url(#filter0_d_268_617);
+}
+
+.btn:active path {
+    fill: #385CDE;
 }

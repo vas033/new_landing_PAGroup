@@ -2,15 +2,38 @@ import React, { useEffect, useState } from 'react';
 import styles from './navheader.css';
 import burger from './burger.css';
 import navList from '../../arrays/navHeader';
+import { scrollTo } from '../../../src/hooks/navScrollTo';
+import getCoords from '../../../src/hooks/getCoords';
+
+interface IMyObject {
+  [key: string]: number
+}
+
 
 export function NavHeader() {
+  const coords: IMyObject = {};
+  useEffect(() => {
+    navList.map(el => {
+      const elem = document.getElementById(el.link);
+      console.log(elem);
+      if (elem) {
+        coords[el.link] = getCoords(elem).top;
+      }
+    })
+  })
   return (
     <div className={styles.container}>
       <nav className={styles.nav}>
         {navList.map(el =>
-          <a className={styles.navLink} href={el.link} key={navList.indexOf(el)} onClick={() => {}} >
+          <button
+            id={el.id}
+            className={styles.navLink}
+            key={navList.indexOf(el)}
+            onClick={() => {
+              scrollTo(coords[el.link])
+            }} >
             {el.name}
-          </a>
+          </button>
         )}
       </nav>
       <div>

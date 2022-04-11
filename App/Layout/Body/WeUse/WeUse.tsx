@@ -5,7 +5,7 @@ import { WeUseItem } from './WeUseItem';
 
 export function WeUse() {
   return (
-    <section className={styles.container}>
+    <section id='sectionWeUse' className={styles.container}>
       <h2 className={styles.title}>
         Используем лучшие <span>технологии</span> <br />
         для решения ваших задач

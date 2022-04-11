@@ -8,7 +8,7 @@ import { WhatWeDoItem } from './WhatWeDoItem';
 export function WhatWeDo() {
 
   return (
-    <section className={styles.section}>
+    <section id='sectionWhatWeDo' className={styles.section}>
       <div className={styles.line1}>
         <svg width="1920" height="354" viewBox="0 0 1920 354" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path opacity="0.3" d="M3.53138e-08 2C-0.552285 2 -1 1.55228 -1 1C-1 0.447715 -0.552285 2.98818e-08 -3.53138e-08 0L3.53138e-08 2ZM505.419 0.999973L505.419 -2.73461e-05L505.733 -2.73631e-05L505.99 0.178906L505.419 0.999973ZM1011.72 353L1011.72 354L1011.41 354L1011.15 353.821L1011.72 353ZM1919 352L1920 352L1920 354L1919 354L1919 352ZM-3.53138e-08 0L505.419 -2.73461e-05L505.419 1.99997L3.53138e-08 2L-3.53138e-08 0ZM505.99 0.178906L1012.29 352.179L1011.15 353.821L504.848 1.82104L505.99 0.178906ZM1011.72 352L1919 352L1919 354L1011.72 354L1011.72 352Z" fill="#3D67FF" fillOpacity="0.3" />

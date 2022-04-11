@@ -4,7 +4,7 @@ import autosnab from '../../../src/img/autosnab.png';
 
 export function Portfolio() {
   return (
-    <section>
+    <section id='sectionPortfolio'>
       <div className={styles.container} style={{ height: '1000px' }}>
         <div className={styles.imgContainer}>
           

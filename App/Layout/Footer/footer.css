@@ -1,0 +1,161 @@
+@keyframes strokeOffsetLine1 {
+    0% {
+        stroke-dashoffset: 505%
+    }
+    100% {
+        stroke-dashoffset: 312%
+    }
+}
+
+@keyframes strokeOffsetLine2 {
+    0% {
+        stroke-dashoffset: 150%
+    }
+    100% {
+        stroke-dashoffset: 0%
+    }
+}
+
+.line1,
+.line2,
+.line3 {
+    position: absolute;
+}
+
+.line3 {
+    top: 535px;
+}
+
+.line1anim,
+.line2anim,
+.line3anim {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.line1anim path {
+    animation: strokeOffsetLine1 2s linear infinite;
+}
+
+.line2anim path,
+.line3anim path {
+    animation: strokeOffsetLine2 2s linear infinite;
+}
+
+.footer {
+    position: relative;
+}
+
+.container {
+    padding: 288px 208px 100px 208px;
+}
+
+.hiddenLinkContainer,
+.linkContainer {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.hiddenLinkContainer {
+    margin-bottom: 278px;
+}
+
+.title,
+.hiddenLink {
+    line-height: 100%;
+    letter-spacing: -0.01em;
+}
+
+.title {
+    margin-bottom: 32px;
+    display: block;
+}
+
+.hiddenLink {
+    margin-bottom: 17px;
+    font-size: 80px;
+}
+
+.hiddenLinkBorder {
+    border: 1px solid rgba(152, 150, 168, 0.5);
+    transition: border .2s ease;
+}
+
+.hiddenLinkBorder:before {
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform .3s ease;
+}
+
+.infoContainer {
+    flex: 0 0 30%;
+}
+
+.infoNav,
+.firmTaxInfo,
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoNav {
+    margin-bottom: 50px;
+}
+
+.firmTaxInfo {
+    width: 100%;
+}
+
+.firmInfo,
+.infoNav,
+.firmTaxInfo {
+    font-size: 24px;
+    line-height: 200%;
+}
+
+.linkContainer {
+    margin-bottom: 27px;
+}
+
+.mail {
+    margin-bottom: 8px;
+    line-height: 150%;
+}
+
+.nav {
+    flex: 0 0 65%;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    flex: 0 0 33%;
+}
+
+.firmTaxInfo,
+.lisence {
+    color: #9896A8;
+}
+
+.lisence {
+    font-size: 20px;
+    line-height: 160%;
+}
+
+.mail:hover+.hiddenLinkBorder,
+.hiddenLink:hover+.hiddenLinkBorder {
+    border: none;
+}
+
+.mail:hover+.hiddenLinkBorder:before,
+.hiddenLink:hover+.hiddenLinkBorder:before {
+    display: block;
+    border: 1px solid white;
+    transform: translateX(0%);
+}

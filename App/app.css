@@ -14,8 +14,13 @@
 
 body {
     color: #FFF;
-    background-color: #0A0A22;
     font-family: 'IBM Plex Mono';
+}
+
+body,
+section,
+footer {
+    background-color: #0A0A22;
 }
 
 button {
