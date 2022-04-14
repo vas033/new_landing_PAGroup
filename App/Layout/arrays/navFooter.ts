@@ -1,27 +1,33 @@
 const navFooter = [
         {
                 name: 'Чем мы занимаемся',
-                link: '#'
+                link: 'WhatWeDo',
+                id: 'navWhatWeDo'
         },
         {
                 name: 'Технологии',
-                link: '#'
+                link: 'WeUse',
+                id: 'navWeUse'
         },
         {
                 name: 'Новости',
-                link: '#'
+                link: 'News',
+                id: 'navNews'
         },
         {
                 name: 'Портфолио',
-                link: '#'
+                link: 'Portfolio',
+                id: 'navPortfolio'
         },
         {
                 name: 'Преимущества',
-                link: '#'
+                link: 'Benefits',
+                id: 'navBenefits'
         },
         {
                 name: 'Оставить заявку',
-                link: '#'
+                link: 'Footer',
+                id: 'navFooter'
         },
 ]
 

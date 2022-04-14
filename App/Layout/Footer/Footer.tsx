@@ -1,8 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import getCoords from '../../src/hooks/getCoords';
 import navFooter from '../arrays/navFooter';
 import styles from './footer.css';
+import { scrollTo } from '../../src/hooks/navScrollTo';
 
-export function Footer() {
+// interface IMyObject {
+//   [key: string]: number
+// }
+
+interface IMyCoords {
+  coordsLayout: {[key:string]: number}
+}
+
+export function Footer({coordsLayout}: IMyCoords) {
+  // const coords: IMyObject = {};
+  // useEffect(() => {
+  //   navFooter.map(el => {
+  //     const elem = document.getElementById(el.link);
+  //     if (elem) {
+  //       coords[el.link] = getCoords(elem).top;
+  //       console.log(coords);
+  //     }
+  //   })
+  // })
   return (
     <footer className={styles.footer}>
       <div className={styles.line1}>
@@ -61,7 +81,14 @@ export function Footer() {
           </div>
           <nav className={styles.nav}>
             {navFooter.map((el) =>
-              <a className={styles.navLinks} key={navFooter.indexOf(el)} onClick={() => {}}>{el.name}</a>
+              <button
+                className={styles.navLinks}
+                key={navFooter.indexOf(el)}
+                onClick={() => {
+                  scrollTo(coordsLayout[el.link])
+                }}>
+                {el.name}
+              </button>
             )}
           </nav>
         </div>

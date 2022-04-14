@@ -10,7 +10,7 @@ export function OurBenefits() {
 
   useEffect(() => {
     const section = document.getElementById('sectionBenefits');
-    const container = document.getElementById('benefits');
+    const container = document.getElementById('benefitsContainer');
 
 
     if (container && section) {
@@ -25,6 +25,7 @@ export function OurBenefits() {
 
   return (
     <section id='sectionBenefits' className={styles.section}>
+      <div id='benefitsContainer' className={styles.benefits}></div>
       <div className={styles.container}>
         <h2 className={styles.title}>Наши преимущества</h2>
         <div className={styles.cardsContainer}>

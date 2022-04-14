@@ -3,11 +3,15 @@ import styles from './header.css';
 import { Logo } from './Logo';
 import { NavHeader } from './NavHeader';
 
-export function Header() {
+interface IMyCoords {
+  coordsLayout: {[key:string]: number}
+}
+
+export function Header({coordsLayout}: IMyCoords) {
   return (
     <header className={styles.container} >
       <Logo />
-      <NavHeader />
+      <NavHeader coords={coordsLayout}/>
     </header>
   );
 }

@@ -5,22 +5,12 @@ import navList from '../../arrays/navHeader';
 import { scrollTo } from '../../../src/hooks/navScrollTo';
 import getCoords from '../../../src/hooks/getCoords';
 
-interface IMyObject {
-  [key: string]: number
+interface IMyCoords {
+  coords: {[key:string]: number}
 }
 
 
-export function NavHeader() {
-  const coords: IMyObject = {};
-  useEffect(() => {
-    navList.map(el => {
-      const elem = document.getElementById(el.link);
-      console.log(elem);
-      if (elem) {
-        coords[el.link] = getCoords(elem).top;
-      }
-    })
-  })
+export function NavHeader({coords}:IMyCoords) {
   return (
     <div className={styles.container}>
       <nav className={styles.nav}>

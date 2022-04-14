@@ -9,8 +9,7 @@ export const scrollTo = ( position: number, duration = 3000 ) => {
        // decide what type of reference that is
        // if neither ref or id is provided  set element to null
 
-       start = initialPosition < position ? position + 200 : position ;
-       console.log(start)
+       start = initialPosition < position ? position + 200 : position + 95 ;
 
 
 

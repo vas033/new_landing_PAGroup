@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Controller, Scene } from 'react-scrollmagic';
 import { OurBenefits } from './Body/OurBenefits';
 import { Portfolio } from './Body/Portfolio';
@@ -9,10 +9,13 @@ import { Footer } from './Footer';
 import { Header } from './Header';
 import styles from './layout.css';
 import navStyle from './Header/NavHeader/navheader.css';
+import getCoords from '../src/hooks/getCoords';
+import navList from './arrays/navHeader';
 
 export function Layout() {
   function removeActive() {
     const header = document.querySelectorAll(`header nav .${navStyle.active}`);
+    console.log(header)
     header.forEach(el => el.classList.remove(navStyle.active))
   }
 
@@ -24,10 +27,23 @@ export function Layout() {
     currentNav?.classList.add(navStyle.active)
   }
 
+  let objCoords: { [key: string]: number } = {};
+  const [coords, setCoords] = useState({});
+  
+  useEffect(() => {
+    navList.map(el => {
+      const elem = document.getElementById(el.link);
+      if (elem) {
+        objCoords[el.link] = getCoords(elem).top;
+      }
+    })
+    setCoords(objCoords)
+  }, []);
+
   return (
     <>
       <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
-        <Header />
+        <Header coordsLayout={coords}/>
         <Scene pin classToggle={'active'} >
           {
             (progress: any, event: any) => {
@@ -112,7 +128,7 @@ export function Layout() {
 
               return (
                 <div id='Footer' style={{ height: '100vh' }}>
-                  <Footer />
+                  <Footer coordsLayout={coords} />
                 </div>
               )
             }

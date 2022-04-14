@@ -57,11 +57,11 @@
 
 .line1anim path,
 .line3anim path {
-    animation: strokeOffsetLine1 2s linear infinite;
+    animation: strokeOffsetLine1 10s linear infinite;
 }
 
 .line2anim path {
-    animation: strokeOffsetLine2 2s linear infinite;
+    animation: strokeOffsetLine2 10s linear infinite;
 }
 
 .container {

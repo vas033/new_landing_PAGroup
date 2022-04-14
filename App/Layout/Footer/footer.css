@@ -35,12 +35,12 @@
 }
 
 .line1anim path {
-    animation: strokeOffsetLine1 2s linear infinite;
+    animation: strokeOffsetLine1 10s linear infinite;
 }
 
 .line2anim path,
 .line3anim path {
-    animation: strokeOffsetLine2 2s linear infinite;
+    animation: strokeOffsetLine2 10s linear infinite;
 }
 
 .footer {
@@ -132,10 +132,12 @@
 .nav {
     flex: 0 0 65%;
     flex-wrap: wrap;
+    z-index: 3;
 }
 
-.nav a {
+.nav button {
     flex: 0 0 33%;
+    text-align: start;
 }
 
 .firmTaxInfo,
