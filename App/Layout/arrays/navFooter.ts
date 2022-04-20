@@ -2,32 +2,38 @@ const navFooter = [
         {
                 name: 'Чем мы занимаемся',
                 link: 'WhatWeDo',
-                id: 'navWhatWeDo'
+                id: 'navWhatWeDo',
+                index: '1'
         },
         {
                 name: 'Технологии',
                 link: 'WeUse',
-                id: 'navWeUse'
+                id: 'navWeUse',
+                index: '3'
         },
         {
                 name: 'Новости',
                 link: 'News',
-                id: 'navNews'
+                id: 'navNews',
+                index: '5'
         },
         {
                 name: 'Портфолио',
                 link: 'Portfolio',
-                id: 'navPortfolio'
+                id: 'navPortfolio',
+                index: '2'
         },
         {
                 name: 'Преимущества',
                 link: 'Benefits',
-                id: 'navBenefits'
+                id: 'navBenefits',
+                index: '4'
         },
         {
                 name: 'Оставить заявку',
                 link: 'Footer',
-                id: 'navFooter'
+                id: 'navFooter',
+                index: '6'
         },
 ]
 

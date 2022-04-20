@@ -5,12 +5,7 @@ import navList from '../../arrays/navHeader';
 import { scrollTo } from '../../../src/hooks/navScrollTo';
 import getCoords from '../../../src/hooks/getCoords';
 
-interface IMyCoords {
-  coords: {[key:string]: number}
-}
-
-
-export function NavHeader({coords}:IMyCoords) {
+export function NavHeader() {
   return (
     <div className={styles.container}>
       <nav className={styles.nav}>
@@ -20,7 +15,7 @@ export function NavHeader({coords}:IMyCoords) {
             className={styles.navLink}
             key={navList.indexOf(el)}
             onClick={() => {
-              scrollTo(coords[el.link])
+              document.getElementById(el.link)?.scrollIntoView({behavior: 'smooth'})
             }} >
             {el.name}
           </button>

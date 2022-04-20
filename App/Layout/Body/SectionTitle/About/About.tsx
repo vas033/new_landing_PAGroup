@@ -6,14 +6,14 @@ import styles from './about.css';
 export function About() {
   return (
     <div className={styles.container}>
-      {aboutArr.map((el) => 
-      <ItemDesc 
-      title={el.title} 
-      desc={el.description} 
-      key={aboutArr.indexOf(el)} 
-      clTitle={styles.title}
-      clDesc={styles.desc}
-      />
+      {aboutArr.map((el) =>
+        <ItemDesc
+          title={el.title}
+          desc={el.description}
+          key={aboutArr.indexOf(el)}
+          clTitle={styles.title}
+          clDesc={styles.desc}
+        />
       )}
     </div>
   );

@@ -24,7 +24,7 @@ export function OurBenefits() {
   }, [])
 
   return (
-    <section id='sectionBenefits' className={styles.section}>
+    <section id='Benefits' className={styles.section} data-target='4'>
       <div id='benefitsContainer' className={styles.benefits}></div>
       <div className={styles.container}>
         <h2 className={styles.title}>Наши преимущества</h2>

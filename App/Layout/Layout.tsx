@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Controller, Scene } from 'react-scrollmagic';
 import { OurBenefits } from './Body/OurBenefits';
 import { Portfolio } from './Body/Portfolio';
 import { SectionTitle } from './Body/SectionTitle/SectionTitle';
@@ -15,7 +14,6 @@ import navList from './arrays/navHeader';
 export function Layout() {
   function removeActive() {
     const header = document.querySelectorAll(`header nav .${navStyle.active}`);
-    console.log(header)
     header.forEach(el => el.classList.remove(navStyle.active))
   }
 
@@ -27,114 +25,42 @@ export function Layout() {
     currentNav?.classList.add(navStyle.active)
   }
 
-  let objCoords: { [key: string]: number } = {};
-  const [coords, setCoords] = useState({});
-  
+  function currentTab(arr: number[], links: string[], scrollPos: number) {
+    arr.forEach((el, i) => {
+      if (scrollPos === el) {
+        activeNav(links[i])
+      }
+    })
+  }
+
+  let arrCoords: number[] = [];
+  let arrLinks: string[] = [];
+  const [coords, setCoords] = useState(arrCoords);
+  const [links, setLinks] = useState(arrLinks);
+
   useEffect(() => {
     navList.map(el => {
       const elem = document.getElementById(el.link);
       if (elem) {
-        objCoords[el.link] = getCoords(elem).top;
+        arrLinks.push(el.link);
+        arrCoords.push(getCoords(elem).top)
       }
     })
-    setCoords(objCoords)
+    setCoords(arrCoords);
+    setLinks(arrLinks);
   }, []);
 
   return (
-    <>
-      <Controller globalSceneOptions={{ triggerHook: 'onLeave' }}>
-        <Header coordsLayout={coords}/>
-        <Scene pin classToggle={'active'} >
-          {
-            (progress: any, event: any) => {
-              return (
-                <div id='title'>
-                  <SectionTitle />
-                </div>
-              )
-            }
-          }
-        </Scene>
-        <Scene pin={true}>
-          {
-            (progress: any, event: any) => {
-              if (progress === 1) {
-                activeNav('WhatWeDo');
-              }
-
-              if (event.scrollDirection == 'REVERSE') {
-                activeNav('title');
-              }
-
-              return (
-                <div id='WhatWeDo'>
-                  <WhatWeDo />
-                </div>
-              )
-            }
-          }
-        </Scene>
-        {/* <Scene pin>
-        <Portfolio />
-      </Scene> */}
-        <Scene pin={true}>
-          {
-            (progress: any, event: any) => {
-              if (progress === 1) {
-                activeNav('WeUse');
-              }
-
-              if (event.scrollDirection == 'REVERSE') {
-                activeNav('WhatWeDo');
-              }
-
-              return (
-                <div id='WeUse'>
-                  <WeUse />
-                </div>
-              )
-            }
-          }
-        </Scene>
-        <Scene pin={true}>
-          {
-            (progress: any, event: any) => {
-              if (progress === 1) {
-                activeNav('Benefits');
-              }
-
-              if (event.scrollDirection == 'REVERSE') {
-                activeNav('WeUse');
-              }
-
-              return (
-                <div id='Benefits'>
-                  <OurBenefits />
-                </div>
-              )
-            }
-          }
-        </Scene>
-        <Scene pin={true}>
-          {
-            (progress: any, event: any) => {
-              if (progress === 1) {
-                activeNav('Footer');
-              }
-
-              if (event.scrollDirection == 'REVERSE') {
-                activeNav('Benefits');
-              }
-
-              return (
-                <div id='Footer' style={{ height: '100vh' }}>
-                  <Footer coordsLayout={coords} />
-                </div>
-              )
-            }
-          }
-        </Scene>
-      </Controller>
-    </>
+    <div className={styles.container} onScroll={(e) => {
+      currentTab(coords, links, e.currentTarget.scrollTop)
+    }}>
+      <Header />
+      <SectionTitle />
+      <WhatWeDo />
+      <Portfolio />
+      <WeUse />
+      <OurBenefits />
+      <Footer />
+    </div>
   );
 }

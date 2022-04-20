@@ -7,7 +7,7 @@ import styles from './sectiontitle.css';
 
 export function SectionTitle() {
   return (
-    <section id='sectionTitle'>
+    <section id='sectionTitle' className={styles.section}>
       <div className={styles.container}>
         <svg width="1504" height="690" viewBox="0 0 1504 690" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="1" y="1" width="1502" height="688" stroke="url(#paint0_linear_20_399)" strokeWidth="2" />

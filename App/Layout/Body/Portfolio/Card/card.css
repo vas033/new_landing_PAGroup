@@ -1,0 +1,45 @@
+.container {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 40px;
+    background: rgba(109, 122, 168, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.tagsLine {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.tag {
+    display: block;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    font-size: 18px;
+    line-height: 144%;
+    border-radius: 40px;
+}
+
+.tag:not(:last-child) {
+    margin-right: 16px;
+}
+
+.title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 104px;
+    letter-spacing: 0.02em;
+}
+
+.desc {
+    width: 76%;
+    font-size: 24px;
+    line-height: 142%;
+}
+
+.code {
+    display: block;
+    color: #6D7AA8;
+}

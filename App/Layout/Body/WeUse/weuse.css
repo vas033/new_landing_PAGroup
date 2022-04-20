@@ -1,5 +1,8 @@
 .container {
     padding: 151px 208px 157px 208px;
+}
+
+.listContainer {
     display: flex;
     flex-wrap: wrap;
 }
@@ -12,14 +15,14 @@
     color: #3D67FF;
 }
 
-.container div {
+.listContainer div {
     flex: 0 0 48%;
 }
 
-.container>div:not(:last-child) {
+.listContainer>div:not(:last-child) {
     margin-right: 28px;
 }
 
-.container div:not(:nth-child(n+4)) {
+.listContainer div:not(:nth-child(n+4)) {
     margin-bottom: 72px;
 }

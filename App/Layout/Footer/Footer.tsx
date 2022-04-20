@@ -1,30 +1,16 @@
-import React, { useEffect } from 'react';
-import getCoords from '../../src/hooks/getCoords';
+import React from 'react';
 import navFooter from '../arrays/navFooter';
 import styles from './footer.css';
 import { scrollTo } from '../../src/hooks/navScrollTo';
 
-// interface IMyObject {
-//   [key: string]: number
-// }
 
 interface IMyCoords {
-  coordsLayout: {[key:string]: number}
+  coordsLayout?: {[key:string]: number}
 }
 
 export function Footer({coordsLayout}: IMyCoords) {
-  // const coords: IMyObject = {};
-  // useEffect(() => {
-  //   navFooter.map(el => {
-  //     const elem = document.getElementById(el.link);
-  //     if (elem) {
-  //       coords[el.link] = getCoords(elem).top;
-  //       console.log(coords);
-  //     }
-  //   })
-  // })
   return (
-    <footer className={styles.footer}>
+    <footer id='Footer' className={styles.footer} data-target='6'>
       <div className={styles.line1}>
         <svg width="695" height="1132" viewBox="0 0 695 1132" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path opacity="0.3" d="M694 1131V613.551L566.062 469.774V1.00003H404.806H202.903V63.1538H1.00002" stroke="#3D67FF" strokeOpacity="0.3" strokeWidth="2" strokeLinecap="round" />
@@ -85,8 +71,8 @@ export function Footer({coordsLayout}: IMyCoords) {
                 className={styles.navLinks}
                 key={navFooter.indexOf(el)}
                 onClick={() => {
-                  scrollTo(coordsLayout[el.link])
-                }}>
+                  document.getElementById(el.link)?.scrollIntoView({behavior: 'smooth'})
+                }} >
                 {el.name}
               </button>
             )}

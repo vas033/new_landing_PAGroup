@@ -20,7 +20,7 @@ module.exports = {
         },
         mode: NODE_ENV ? NODE_ENV : 'development',
         entry: [
-                path.resolve(__dirname, '/App/App.jsx')
+                path.resolve(__dirname, './App/App.jsx')
         ],
         output: {
                 path: path.resolve(__dirname, 'dist'),
@@ -68,7 +68,7 @@ module.exports = {
         plugins: [
                 new CleanWebpackPlugin(),
                 new HtmlWebpackPlugin({
-                        template: path.resolve(__dirname, '/index.html'),
+                        template: path.resolve(__dirname, './index.html'),
                         // favicon: path.resolve(__dirname, 'src/img/logo.svg'),
                 })
         ]

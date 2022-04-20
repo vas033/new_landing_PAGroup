@@ -2,32 +2,38 @@ const navHeader = [
         {
                 name: 'чем мы занимаемся',
                 link: 'WhatWeDo',
-                id: 'navWhatWeDo'
+                id: 'navWhatWeDo',
+                index: '1'
         },
         {
                 name: 'портфолио',
                 link: 'Portfolio',
-                id: 'navPortfolio'
+                id: 'navPortfolio',
+                index: '2'
         },
         {
                 name: 'технологии',
                 link: 'WeUse',
-                id: 'navWeUse'
+                id: 'navWeUse',
+                index: '3'
         },
         {
                 name: 'преимущества',
                 link: 'Benefits',
-                id: 'navBenefits'
+                id: 'navBenefits',
+                index: '4'
         },
         {
                 name: 'новости',
                 link: 'News',
-                id: 'navNews'
+                id: 'navNews',
+                index: '5'
         },
         {
                 name: 'оставить заявку',
                 link: 'Footer',
-                id: 'navFooter'
+                id: 'navFooter',
+                index: '6'
         },
 ]
 
