@@ -75,3 +75,12 @@ ul {
     margin-inline-end: unset;
     padding-inline-start: unset;
 }
+
+::-webkit-scrollbar-thumb {
+    background-color: #96ADFF;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+    height: 0px;
+}
