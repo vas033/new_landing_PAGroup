@@ -68,7 +68,7 @@ export function Portfolio() {
             let pos = e.currentTarget.scrollTop;
             
             const stepSlide = 432;
-            let imgStep = 743;
+            let imgStep = 843;
 
             let step = imgStep / stepSlide;
            
@@ -105,7 +105,7 @@ export function Portfolio() {
             </div>
 
             <div id='img2' className={styles.image}>
-              <SvgAnimScroll href={climatec} height={height - 738} imgId='imgTwo' />
+              <SvgAnimScroll href={climatec} height={height - 838} imgId='imgTwo' />
             </div>
           </div>
           <span>Смотреть все работы</span>
