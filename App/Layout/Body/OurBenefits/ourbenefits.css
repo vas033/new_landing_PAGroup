@@ -1,5 +1,6 @@
 .container {
     padding: 215px 208px 294px 208px;
+    z-index: 5;
 }
 
 .benefits {
@@ -11,13 +12,73 @@
 }
 
 .section {
-    background-repeat: no-repeat;
-    background-size: 350px 350px;
+    position: relative;
+}
+
+/*  */
+/*  */
+
+@keyframes strokeOffsetLine1 {
+    0% {
+        stroke-dashoffset: 150%
+    }
+    100% {
+        stroke-dashoffset: 0%
+    }
+}
+
+@keyframes strokeOffsetLine2 {
+    0% {
+        stroke-dashoffset: 505%
+    }
+    100% {
+        stroke-dashoffset: 312%
+    }
+}
+
+.line1,
+.line1anim,
+.line2,
+.line2anim,
+.line3,
+.line3anim {
+    position: absolute;
+}
+
+.line2 {
+    left: 63%;
+}
+
+.line3 {
+    top: 580px;
+}
+
+.line1anim,
+.line2anim,
+.line3anim {
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.line1anim,
+.line2anim {
+    bottom: 0;
+}
+
+.line1anim path,
+.line3anim path {
+    animation: strokeOffsetLine1 10s linear infinite;
+}
+
+.line2anim path {
+    animation: strokeOffsetLine2 10s linear infinite;
 }
 
 .cardsContainer {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 30px;
 }
 
 .title {
