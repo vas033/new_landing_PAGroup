@@ -1,22 +1,11 @@
 .headerLogoDiv {
     display: flex;
     align-items: center;
-    cursor: pointer;
-}
-
-.headerLogoDiv:hover .headerLogo path {
-    fill: #96ADFF;
-}
-
-.headerLogoDiv:hover .logoTitle {
-    color: #96adff;
 }
 
 .headerLogo {
     margin-right: 15px;
 }
-
-
 
 .logoTitle {
     font-family: 'Visby Medium Italic';
