@@ -16,7 +16,7 @@ export function Card({id, tags, title, desc}: IMyCard) {
       </ul>
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.desc}>
-        <span className={styles.code}>&lt;description&gt;</span>
+        <span className={styles.code}>&lt;/description&gt;</span>
         {desc}
         <span className={styles.code}>&lt;/description&gt;</span>
       </p>
