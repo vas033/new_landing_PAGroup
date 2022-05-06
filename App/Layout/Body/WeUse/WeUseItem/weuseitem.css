@@ -72,3 +72,10 @@
     padding-top: 24px;
     flex: 0 0 70%;
 }
+
+@media (max-width: 1919px) {
+    .title {
+        flex: 0 0 29%;
+        font-size: 18px;
+    }
+}

@@ -4,14 +4,14 @@ import { Logo } from './Logo';
 import { NavHeader } from './NavHeader';
 
 interface IMyCoords {
-  coordsLayout?: {[key:string]: number}
+  width: number
 }
 
-export function Header({coordsLayout}: IMyCoords) {
+export function Header({width}: IMyCoords) {
   return (
     <header className={styles.container} >
       <Logo />
-      <NavHeader />
+      <NavHeader width={width} />
     </header>
   );
 }

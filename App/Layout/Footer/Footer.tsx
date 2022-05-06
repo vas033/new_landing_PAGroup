@@ -67,14 +67,14 @@ export function Footer({coordsLayout}: IMyCoords) {
           </div>
           <nav className={styles.nav}>
             {navFooter.map((el) =>
-              <button
+              <div
                 className={styles.navLinks}
                 key={navFooter.indexOf(el)}
                 onClick={() => {
                   document.getElementById(el.link)?.scrollIntoView({behavior: 'smooth'})
                 }} >
                 {el.name}
-              </button>
+              </div>
             )}
           </nav>
         </div>

@@ -1,5 +1,12 @@
 .container {
     height: 100vh;
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
+    scroll-snap-type: y proximity;
     overflow-y: scroll;
+}
+
+@media (max-width: 1429px) {
+    .container {
+        scroll-snap-type: unset;
+    }
 }

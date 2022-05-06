@@ -7,12 +7,14 @@ interface IMyWhatWeDoItem {
   title: string,
   desc: string,
   linkMore: string,
-  backColor: string,
-  svgColor: string
+  svgColor: string,
+  width: number
 }
 
-export function WhatWeDoItem({ linkImg, title, desc, linkMore, backColor, svgColor }: IMyWhatWeDoItem) {
-  const [isOnHover, setIsOnHover] = useState(false);
+export function WhatWeDoItem({ linkImg, title, desc, linkMore, width, svgColor }: IMyWhatWeDoItem) {
+
+  let paddingConst = '19px 16px';
+  if (width >= 1920) paddingConst = '33px 45px';
 
   let colors;
 
@@ -38,10 +40,7 @@ export function WhatWeDoItem({ linkImg, title, desc, linkMore, backColor, svgCol
   }
 
   return (
-    <a href={linkMore}
-      target='_blank'
-      className={styles.container}
-    >
+    <div className={styles.container}>
       <Player
         src={linkImg}
         style={{
@@ -50,7 +49,7 @@ export function WhatWeDoItem({ linkImg, title, desc, linkMore, backColor, svgCol
           right: '0',
           bottom: '0',
           left: '0',
-          padding: '33px 40px'
+          padding: paddingConst
         }}
         className={colors}
         loop
@@ -59,8 +58,8 @@ export function WhatWeDoItem({ linkImg, title, desc, linkMore, backColor, svgCol
       <div className={styles.about}>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.desc}>{desc}</p>
-        <span className={styles.linkMore}>Подробнее</span>
+        {/* <span className={styles.linkMore}>Подробнее</span> */}
       </div>
-    </a>
+    </div>
   );
 }

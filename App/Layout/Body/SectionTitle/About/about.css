@@ -18,3 +18,21 @@
     font-size: 16px;
     letter-spacing: -0.02em;
 }
+
+@media (max-width: 1919px) {
+    .container {
+        width: 67%;
+    }
+}
+
+@media (max-width: 1439px) {
+    .container {
+        width: 100%;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .desc {
+        line-height: 100%;
+    }
+}

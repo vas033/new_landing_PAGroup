@@ -13,7 +13,7 @@
 
 .container {
     position: relative;
-    margin-top: 131px;
+    margin-top: 3vh;
     margin-left: 208px;
     margin-right: 208px;
 }
@@ -90,4 +90,47 @@
 
 .btn:active path {
     fill: #385CDE;
+}
+
+@media (max-width: 1919px) {
+    .container {
+        margin-top: 1vh;
+        margin-right: 6vw;
+        margin-left: 6vw;
+    }
+    .mainContentContainer {
+        padding: 4.86vw 5.05vw 8.06vw 5.05vw;
+    }
+    .title {
+        font-size: 40px;
+        line-height: 140%;
+    }
+    .desc {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 1439px) {
+    .container {
+        margin-top: 1vh;
+        margin-right: 8.33vw;
+        margin-left: 8.33vw;
+    }
+    .mainContentContainer {
+        padding: 1vw;
+    }
+    .desc {
+        font-size: 16px;
+    }
+    .btn span {
+        font-size: 14px;
+    }
+    @keyframes strokeOffset {
+        0% {
+            stroke-dashoffset: 505%
+        }
+        100% {
+            stroke-dashoffset: 107%
+        }
+    }
 }

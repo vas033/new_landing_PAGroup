@@ -95,8 +95,8 @@ export const SvgSelector = ({ id }: Props) => {
             </g>
           </g>
           <defs>
-            <filter id="filter0_b_420_143" x="-80" y="-80" width="512" height="544" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <filter id="filter0_b_420_143" x="-80" y="-80" width="512" height="544" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feGaussianBlur in="BackgroundImage" stdDeviation="40" />
               <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_420_143" />
               <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_420_143" result="shape" />

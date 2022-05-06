@@ -23,6 +23,21 @@
     margin-right: 28px;
 }
 
-.listContainer div:not(:nth-child(n+4)) {
+.listContainer>div:not(:nth-child(n+5)) {
     margin-bottom: 72px;
+}
+
+@media (max-width: 1919px) {
+    .container {
+        padding: 13.98vh 11.1vw 12.69vh 11.1vw;
+    }
+    .listContainer div {
+        flex: 0 0 47%;
+    }
+    .listContainer>div:not(:last-child) {
+        margin-right: 32px;
+    }
+    .listContainer>div:not(:nth-child(n+5)) {
+        margin-bottom: 60px;
+    }
 }

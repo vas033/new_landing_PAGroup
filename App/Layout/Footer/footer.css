@@ -48,6 +48,7 @@
 }
 
 .container {
+    position: absolute;
     padding: 288px 208px 100px 208px;
 }
 
@@ -135,9 +136,10 @@
     z-index: 3;
 }
 
-.nav button {
+.navLinks {
     flex: 0 0 33%;
     text-align: start;
+    cursor: pointer;
 }
 
 .firmTaxInfo,
@@ -160,4 +162,28 @@
     display: block;
     border: 1px solid white;
     transform: translateX(0%);
+}
+
+@media (max-width: 1919px) {
+    .container {
+        padding: 21.20vh 11.1vw 12.96vh 11.1vw;
+    }
+    .hiddenLink {
+        font-size: 60px;
+    }
+    .hiddenLinkContainer {
+        margin-bottom: 24.44vh;
+    }
+    .firmTaxInfo {
+        flex-direction: column;
+    }
+    .infoContainer {
+        flex: 0 0 36%;
+    }
+    .navLinks:nth-child(-3n+4) {
+        flex: 0 0 34%;
+    }
+    .navLinks {
+        flex: 0 0 30%;
+    }
 }

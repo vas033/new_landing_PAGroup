@@ -3,11 +3,12 @@ import styles from './svganimscroll.css';
 
 interface IMySvg {
   href: string,
+  width: number,
   height: number,
   imgId: string,
 }
 
-export function SvgAnimScroll({ href, height, imgId }: IMySvg) {
+export function SvgAnimScroll({ href, width, height, imgId }: IMySvg) {
   function svgHeight(h?: number) {
       if (h) {
         return 643 - height + h;
@@ -16,15 +17,27 @@ export function SvgAnimScroll({ href, height, imgId }: IMySvg) {
       }
   };
 
+  let svgWidth = 634;
+  let svgImgHeight = 643;
+
+  if (width < 1919 && width > 1439) {
+    svgWidth = 544;
+  } else if (width < 1440) {
+    svgWidth = 312;
+    svgImgHeight = 312;
+  } else {
+    svgWidth = 634;
+  }
+
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="634" height="643" viewBox="0 0 634 643" preserveAspectRatio="none">
+    <svg xmlns="http://www.w3.org/2000/svg" width={`${svgWidth}`} height={`${svgImgHeight}`} viewBox={`0 0 ${svgWidth} ${svgImgHeight}`} preserveAspectRatio="none">
       <defs>
-        <pattern xmlns="http://www.w3.org/2000/svg" id={imgId} patternUnits="userSpaceOnUse" width="634" height="643">
-          <image href={href} x="0" y="0" width="634" height="643" />
+        <pattern xmlns="http://www.w3.org/2000/svg" id={imgId} patternUnits="userSpaceOnUse" width={`${svgWidth}`} height={`${svgImgHeight}`}>
+          <image href={href} x="0" y="0" width="643" height="643" />
         </pattern>
       </defs>
 
-      <path fill={`url(#${imgId})`} d="M0,0 C150,00 271,00 634,0 L634,643  L0,643 Z">
+      <path fill={`url(#${imgId})`} d={`M0,0 C150,00 271,00 ${svgWidth},0 L${svgWidth},${svgImgHeight}  L0,${svgImgHeight} Z`}>
         <animate
           attributeName="d"
           dur="7s"

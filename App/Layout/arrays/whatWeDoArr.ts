@@ -41,7 +41,7 @@ const whatWeDoArr = [
         },
         {
                 linkImg: 'https://cdn.lordicon.com/zpxybbhl.json',
-                title: 'Администрирование IT инфраструктуры',
+                title: 'Администрирование IT',
                 desc: 'Сокращения расходов на инфраструктуру, мониторинг серверов и сервисов, персональный менеджер',
                 linkMore: '#',
                 backColor: 'rgba(61, 255, 220, 0.16)',

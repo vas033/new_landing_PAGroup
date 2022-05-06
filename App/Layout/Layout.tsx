@@ -12,6 +12,8 @@ import getCoords from '../src/hooks/getCoords';
 import navList from './arrays/navHeader';
 
 export function Layout() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  
   function removeActive() {
     const header = document.querySelectorAll(`header nav .${navStyle.active}`);
     header.forEach(el => el.classList.remove(navStyle.active))
@@ -54,11 +56,11 @@ export function Layout() {
     <div className={styles.container} onScroll={(e) => {
       currentTab(coords, links, e.currentTarget.scrollTop)
     }}>
-      <Header />
-      <SectionTitle />
-      <WhatWeDo />
-      <Portfolio />
-      <WeUse />
+      <Header width={windowWidth} />
+      <SectionTitle width={windowWidth} />
+      <WhatWeDo width={windowWidth} />
+      <Portfolio width={windowWidth} />
+      <WeUse width={windowWidth} />
       <OurBenefits />
       <Footer />
     </div>

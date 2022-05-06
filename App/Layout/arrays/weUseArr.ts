@@ -13,7 +13,7 @@ const weUseArr = [
         },
         {
                 title: 'Devops',
-                text: 'Ngnix, Kubernetes, CI/CD, Docker, Docker-compose, Jenkins, TeamCity, Apache, Zabbix'
+                text: 'Python, AWS, Yandex Cloud, Ngnix, GitLab CI/CD, Docker, docker-compose, docker-swarm, Kubernetes, Ansible, Terraform, Prometheus, Elastic stack'
         },
         {
                 title: 'Mobile',

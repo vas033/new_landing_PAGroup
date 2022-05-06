@@ -7,7 +7,7 @@ export function Logo() {
     <div className={styles.headerLogoDiv}>
       <img className={styles.headerLogo} src={logo} alt="logo" />
       <p className={styles.logoTitle}>
-        <span className={styles.logoTitleDesc}>креативная <br/> команда</span>
+        <span className={styles.logoTitleDesc}>команда <br/> разработки</span>
       </p>
     </div>
   );

@@ -15,7 +15,10 @@
     position: relative;
 }
 
+
 /*  */
+
+
 /*  */
 
 @keyframes strokeOffsetLine1 {
@@ -83,4 +86,20 @@
 
 .title {
     margin-bottom: 169px;
+}
+
+@media (max-width: 1920px) {
+    .container {
+        padding: 16.2vh 11.1vw;
+    }
+    .cardsContainer {
+        justify-content: space-between;
+    }
+    .line1 {
+        right: 0;
+    }
+    .line2 {
+        top: 2vh;
+        left: 54%;
+    }
 }

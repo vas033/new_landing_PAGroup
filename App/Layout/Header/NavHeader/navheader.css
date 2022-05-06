@@ -23,3 +23,9 @@
 .navLink:hover {
     color: #96ADFF;
 }
+
+@media (max-width: 1919px) {
+    .navLink {
+        margin-right: 16px;
+    }
+}

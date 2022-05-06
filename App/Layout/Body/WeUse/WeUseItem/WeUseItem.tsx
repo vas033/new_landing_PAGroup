@@ -3,10 +3,27 @@ import styles from './weuseitem.css';
 
 interface IMyUseItem {
   title: string,
-  text: string
+  text: string,
+  width: number
 }
 
-export function WeUseItem({ title, text }: IMyUseItem) {
+function newLinePoint (width: number, point: number) {
+  const percent = 7.05;
+  const newWidthPercent = width / 100;
+  const coeff = point / percent;
+  const newPoint = coeff * newWidthPercent;
+  return newPoint;
+}
+
+export function WeUseItem({ title, text, width }: IMyUseItem) {
+  let svgWidth = 705;
+  let svgLine = "M0 62H126.024L174.325 1H671.31L738 62";
+
+  if (width < 1919) {
+    svgWidth = 520;
+    svgLine = `M0 61H${newLinePoint(svgWidth, 126.024)}L${newLinePoint(svgWidth, 174.325)} 2H${newLinePoint(svgWidth, 651.31)}L${newLinePoint(svgWidth, 738)} 61`
+    console.log(svgLine)
+  }
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer} >
@@ -19,8 +36,8 @@ export function WeUseItem({ title, text }: IMyUseItem) {
             </linearGradient>
           </defs>
         </svg>
-        <svg className={styles.line} width="705" height="63" viewBox="0 0 705 63" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 62H126.024L174.325 1H671.31L738 62" stroke="url(#paint0_linear_268_699)" />
+        <svg className={styles.line} width={`${svgWidth}`} height="63" viewBox={`0 0 ${svgWidth} 63`} fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d={svgLine} stroke="url(#paint0_linear_268_699)" />
           <defs>
             <linearGradient id="paint0_linear_268_699" x1="31.4042" y1="-1.16142" x2="87.6306" y2="212.114" gradientUnits="userSpaceOnUse">
               <stop stopColor="#1F1F6B" />
@@ -33,8 +50,8 @@ export function WeUseItem({ title, text }: IMyUseItem) {
             <path d="M21.8706 12C21.8706 17.5331 17.4123 22 11.9353 22C6.45837 22 2 17.5331 2 12C2 6.46695 6.45837 2 11.9353 2C17.4123 2 21.8706 6.46695 21.8706 12Z" fill="none" stroke="#3D67FF" strokeWidth="4" strokeDasharray="270%" strokeDashoffset="0%">
             </path>
           </svg>
-          <svg className={styles.lineAnim} width="705" height="63" viewBox="0 0 705 63" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 62H126.024L174.325 1H671.31L738 62" stroke="#3D67FF" strokeDasharray="26 250%" strokeDashoffset="300%" />
+          <svg className={styles.lineAnim} width={`${svgWidth}`} height="63" viewBox={`0 0 ${svgWidth} 63`} fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d={svgLine} stroke="#3D67FF" strokeWidth='2' strokeDasharray="26 250%" strokeDashoffset="300%" />
           </svg>
         </div>
       </div>

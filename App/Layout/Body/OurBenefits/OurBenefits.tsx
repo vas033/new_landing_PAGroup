@@ -15,7 +15,7 @@ export function OurBenefits() {
       <div className={styles.line1}>
 
         <svg xmlns="http://www.w3.org/2000/svg" width="1922" height="355" viewBox="0 0 1922 355" fill="none">
-          <path d="M1921 353 H1415 L908 1 H0 " stroke="#3D67FF" stroke-opacity="0.3"/>
+          <path d="M1921 353 H1415 L908 1 H0 " stroke="#3D67FF" strokeOpacity="0.3"/>
         </svg>
 
         <div className={styles.line1anim}>
@@ -29,7 +29,7 @@ export function OurBenefits() {
       <div className={styles.line2}>
 
         <svg xmlns="http://www.w3.org/2000/svg" width="696" height="1082" viewBox="0 0 696 1082" fill="none">
-          <path opacity="0.3" d="M1.63892 1081V586.447L129.644 449.032V1.00002H290.984H492.992V60.4036H695" stroke="#3D67FF" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round" />
+          <path opacity="0.3" d="M1.63892 1081V586.447L129.644 449.032V1.00002H290.984H492.992V60.4036H695" stroke="#3D67FF" strokeOpacity="0.3" strokeWidth="2" strokeLinecap="round" />
         </svg>
 
         <div className={styles.line2anim}>
@@ -64,7 +64,7 @@ export function OurBenefits() {
           />
           <Benefit
             title='Даем гарантии'
-            desc='Мы будем с вами на протяжении 12 месяцев после сдачи проекта. Быстро исрпавим ошибки'
+            desc='Мы будем с вами на протяжении 12 месяцев после сдачи проекта. Быстро исправим ошибки'
             id="red"
           />
         </div>
