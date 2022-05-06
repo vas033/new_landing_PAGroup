@@ -21,7 +21,7 @@ export function SectionTitle({width}: IMyTitle) {
     console.log(svg, svgAnim, width)
   
     if(svg && svgAnim) {
-      if (width > 1440 && width < 1920) {
+      if (width >= 1440 && width < 1920) {
         svg.style.width = '88.06vw';
         svgAnim.style.width = '88.06vw';
       } 
