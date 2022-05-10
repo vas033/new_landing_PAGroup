@@ -28,6 +28,7 @@
         "dependencies": {
                 "@lottiefiles/react-lottie-player": "^3.4.4",
                 "generator-react-ts-component-dir": "^1.0.0",
+                "less": "^4.1.2",
                 "react": "^18.0.0",
                 "react-dom": "^18.0.0",
                 "react-typing-effect": "^2.0.5",
