@@ -9,28 +9,27 @@ interface IMyTitle {
   width: number
 }
 
-export function SectionTitle({width}: IMyTitle) {
+export function SectionTitle({ width }: IMyTitle) {
   // let svgWidth = 1504;
   // let svgHeight = 690;
   let btnWidth = 308; //36
   let btnHeight = 104; //40
 
-  useEffect(()=> {
+  useEffect(() => {
     const svg = document.getElementById('svgTitle');
     const svgAnim = document.getElementById('svgTitleAnim');
-    console.log(svg, svgAnim, width)
-  
-    if(svg && svgAnim) {
+
+    if (svg && svgAnim) {
       if (width >= 1440 && width < 1920) {
         svg.style.width = '88.06vw';
         svgAnim.style.width = '88.06vw';
-      } 
+      }
       else if (width >= 1920) {
         svg.style.width = '78.33vw';
         svgAnim.style.width = '78.33vw';
       }
     }
-  
+
     if (width > 1440 && width < 1920) {
       btnWidth = 216;
       btnHeight = 82
@@ -43,19 +42,9 @@ export function SectionTitle({width}: IMyTitle) {
   return (
     <section id='sectionTitle' className={styles.section}>
       <div className={styles.container}>
-        <svg id='svgTitle' width="1504" height="690" viewBox="0 0 1504 690" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="1" y="1" width="1502" height="688" stroke="url(#paint0_linear_20_399)" strokeWidth="2" />
-          <defs>
-            <linearGradient id="paint0_linear_20_399" x1="64" y1="-24.4488" x2="1265.92" y2="796.938" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#1F1F6B" stopOpacity="0.35" />
-              <stop offset="1" stopColor="#1F1F6B" stopOpacity="0.58" />
-            </linearGradient>
-          </defs>
-        </svg>
-
-        <div className={styles.imageAnimContainer} >
-          <svg id='svgTitleAnim' width="1504" height="690" viewBox="0 0 1504 690" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect className={styles.imageAnim} x="1" y="1" width="1502" height="688" stroke="#3D67FF" strokeWidth="3" strokeDasharray="26 500%" strokeDashoffset="0%" />
+        <div>
+          <svg id='svgTitle' width="1504" height="690" viewBox="0 0 1504 690" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="1502" height="688" stroke="url(#paint0_linear_20_399)" strokeWidth="2" />
             <defs>
               <linearGradient id="paint0_linear_20_399" x1="64" y1="-24.4488" x2="1265.92" y2="796.938" gradientUnits="userSpaceOnUse">
                 <stop stopColor="#1F1F6B" stopOpacity="0.35" />
@@ -63,6 +52,18 @@ export function SectionTitle({width}: IMyTitle) {
               </linearGradient>
             </defs>
           </svg>
+
+          <div className={styles.imageAnimContainer} >
+            <svg id='svgTitleAnim' width="1504" height="690" viewBox="0 0 1504 690" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect className={styles.imageAnim} x="1" y="1" width="1502" height="688" stroke="#3D67FF" strokeWidth="3" strokeDasharray="26 500%" strokeDashoffset="0%" />
+              <defs>
+                <linearGradient id="paint0_linear_20_399" x1="64" y1="-24.4488" x2="1265.92" y2="796.938" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#1F1F6B" stopOpacity="0.35" />
+                  <stop offset="1" stopColor="#1F1F6B" stopOpacity="0.58" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
 
           <div className={styles.mainContentContainer} >
             <div className={styles.title}>
