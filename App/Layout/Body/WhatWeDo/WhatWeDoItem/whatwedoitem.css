@@ -31,6 +31,7 @@
 }
 
 .linkMore {
+    display: none;
     color: #3D67FF;
     font-size: 22px;
 }
@@ -94,8 +95,38 @@
     background: rgba(55, 62, 86, 0.1);
 }
 
+.height {
+    height: 100%!important;
+    transition: height .3s ease;
+}
+
+.display {
+    display: none;
+}
+
 @media (max-width: 1919px) {
     .container {
         padding: 19px 16px 19px 120px;
+    }
+}
+
+@media(max-width: 767px) {
+    .container {
+        padding: 84px 4px 13px 4px;
+        text-align: center;
+    }
+    .title {
+        width: 76%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;
+        line-height: 150%;
+    }
+    .desc {
+        display: none;
+    }
+    .linkMore {
+        display: block;
+        font-size: 16px;
     }
 }

@@ -6,13 +6,13 @@
     padding: 5px;
     display: flex;
     align-items: center;
-    border: 2px solid #385CDE;
+    background-color: rgba(61, 121, 255, 0.8);
     border-radius: 50%;
     z-index: 3;
 }
 
 .menuContainer span {
-    color: #385CDE;
+    color: #FFF;
 }
 
 .container {
@@ -85,8 +85,9 @@ button.container.open .burger span:last-child {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #0A0A22;
     backdrop-filter: blur(8px);
+    font-family: 'Visby Regular';
 }
 
 .hiddenMenu {
@@ -113,8 +114,10 @@ button.container.open .burger span:last-child {
 
 .menu nav button {
     width: fit-content;
-    margin-bottom: 25px;
-    font-size: 24px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 160%;
+    text-transform: unset;
 }
 
 @keyframes cb-btn_menu-open-top {

@@ -8,13 +8,15 @@ interface IMyWhatWeDoItem {
   desc: string,
   linkMore: string,
   svgColor: string,
-  width: number
+  width: number,
+  secondTitle: string
 }
 
-export function WhatWeDoItem({ linkImg, title, desc, linkMore, width, svgColor }: IMyWhatWeDoItem) {
+export function WhatWeDoItem({ linkImg, title, desc, linkMore, width, svgColor, secondTitle }: IMyWhatWeDoItem) {
 
   let paddingConst = '19px 16px';
   if (width >= 1920) paddingConst = '33px 45px';
+  if (width <= 767) paddingConst = 'unset'
 
   let colors;
 
@@ -55,10 +57,10 @@ export function WhatWeDoItem({ linkImg, title, desc, linkMore, width, svgColor }
         loop
         hover
       />
-      <div className={styles.about}>
-        <h3 className={styles.title}>{title}</h3>
+      <div className={styles.about} id={linkMore}>
+        <h3 className={styles.title}>{width < 768 ? secondTitle : title}</h3>
         <p className={styles.desc}>{desc}</p>
-        {/* <span className={styles.linkMore}>Подробнее</span> */}
+        <span className={styles.linkMore} >Подробнее</span>
       </div>
     </div>
   );

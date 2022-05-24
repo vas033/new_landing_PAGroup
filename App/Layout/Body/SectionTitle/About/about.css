@@ -22,6 +22,7 @@
 @media (max-width: 1919px) {
     .container {
         width: 67%;
+        margin-bottom: 47px;
     }
 }
 
@@ -34,5 +35,17 @@
     }
     .desc {
         line-height: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    .container div {
+        flex: 0 0 42%;
+    }
+    .container div:first-child {
+        margin-bottom: 32px;
     }
 }

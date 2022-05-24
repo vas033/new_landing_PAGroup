@@ -61,6 +61,7 @@ export function WhatWeDo({width}:IMyWhatWeDo) {
             desc={el.desc}
             linkMore={el.linkMore}
             svgColor={el.svgColors}
+            secondTitle={el.secondTitle}
           />)}
         </div>
       </div>

@@ -84,6 +84,10 @@
     margin-bottom: 30px;
 }
 
+.cardsContainer>div:not(:last-child) {
+    margin-right: 32px;
+}
+
 .title {
     margin-bottom: 169px;
 }
@@ -101,5 +105,27 @@
     .line2 {
         top: 2vh;
         left: 54%;
+    }
+}
+
+@media (max-width: 1439px) {
+    .cardsContainer {
+        overflow-x: scroll;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 3vh 6.33vw;
+    }
+    .title {
+        margin-bottom: 24px;
+    }
+    .cardsContainer {
+        flex-direction: column;
+        overflow-y: unset;
+    }
+    .cardsContainer>div:not(:last-child) {
+        margin-right: unset;
     }
 }

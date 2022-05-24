@@ -42,7 +42,7 @@ export function SectionTitle({ width }: IMyTitle) {
   return (
     <section id='sectionTitle' className={styles.section}>
       <div className={styles.container}>
-        <div>
+        <div className={styles.sectionTitleAnimation}>
           <svg id='svgTitle' width="1504" height="690" viewBox="0 0 1504 690" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="1" y="1" width="1502" height="688" stroke="url(#paint0_linear_20_399)" strokeWidth="2" />
             <defs>
@@ -64,38 +64,61 @@ export function SectionTitle({ width }: IMyTitle) {
               </defs>
             </svg>
           </div>
+        </div>
 
-          <div className={styles.mainContentContainer} >
-            <div className={styles.title}>
-              <h1 className={styles.title} >Разрабатываем профессиональные <br /> IT - решения для вашего бизнеса:</h1>
-              <span className={styles.codeAround} > &lt;/</span>
-              <ReactTypingEffect text={codeText} cursorClassName={styles.cursor} speed={100} typingDelay={1000} eraseSpeed={100} eraseDelay={1000} />
-              <span className={styles.codeAround}>&gt;</span>
-            </div>
-            <About />
-            <div className={styles.bottomDiv}>
-              <p className={styles.desc}>Качественная разработка с высокой степенью<br />информационной безопасности и надежной инфраструктурой</p>
-              <a className={styles.btn} target='_blank' href="https://pa-sales.bitrix24.site/">
-                <svg width={`${btnWidth}`} height={`${btnHeight}`} viewBox="0 0 308 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g className={styles.shadow}>
-                    <path d="M292 84H43L20 61.3538V42.6462V38.5V30.5V20H200L205 24.9231H274L292 42.6462V84Z" fill="#3D67FF" />
-                  </g>
-                  <defs>
-                    <filter id="filter0_d_268_617" x="0" y="0" width={`${btnWidth + 4}`} height={`${btnHeight}`} filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                      <feOffset />
-                      <feGaussianBlur stdDeviation="10" />
-                      <feComposite in2="hardAlpha" operator="out" />
-                      <feColorMatrix type="matrix" values="0 0 0 0 0.879167 0 0 0 0 0.879167 0 0 0 0 0.879167 0 0 0 0.4 0" />
-                      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_268_617" />
-                      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_268_617" result="shape" />
-                    </filter>
-                  </defs>
-                </svg>
-                <span>ОСТАВИТЬ ЗАЯВКУ</span>
-              </a>
-            </div>
+        <div className={styles.mainContentContainer} >
+          <div className={styles.title}>
+            <h1 className={styles.title} >Разрабатываем профессиональные <br /> IT - решения для вашего бизнеса:</h1>
+            <span className={styles.codeAround} > &lt;/</span>
+            <ReactTypingEffect text={codeText} cursorClassName={styles.cursor} speed={100} typingDelay={1000} eraseSpeed={100} eraseDelay={1000} />
+            <span className={styles.codeAround}>&gt;</span>
+          </div>
+          {width < 767 ?
+            <a className={styles.btn} target='_blank' href="https://pa-sales.bitrix24.site/">
+              <svg width="308" height="104" viewBox="0 0 308 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g className={styles.shadow}>
+                  <path d="M292 84H43L20 61.3538V42.6462V38.5V30.5V20H200L205 24.9231H274L292 42.6462V84Z" fill="#3D67FF" />
+                </g>
+                <defs>
+                  <filter id="filter0_d_268_617" x="0" y="0" width={`${btnWidth + 4}`} height={`${btnHeight}`} filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="10" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.879167 0 0 0 0 0.879167 0 0 0 0 0.879167 0 0 0 0.4 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_268_617" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_268_617" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+              <span>ОСТАВИТЬ ЗАЯВКУ</span>
+            </a> :
+            ''
+          }
+          <About />
+          <div className={styles.bottomDiv}>
+            <p className={styles.desc}>Качественная разработка с высокой степенью<br />информационной безопасности и надежной инфраструктурой</p>
+            <a className={styles.btn} target='_blank' href="https://pa-sales.bitrix24.site/">
+              <svg width={`${btnWidth}`} height={`${btnHeight}`} viewBox="0 0 308 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g className={styles.shadow}>
+                  <path d="M292 84H43L20 61.3538V42.6462V38.5V30.5V20H200L205 24.9231H274L292 42.6462V84Z" fill="#3D67FF" />
+                </g>
+                <defs>
+                  <filter id="filter0_d_268_617" x="0" y="0" width={`${btnWidth + 4}`} height={`${btnHeight}`} filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="10" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0.879167 0 0 0 0 0.879167 0 0 0 0 0.879167 0 0 0 0.4 0" />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_268_617" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_268_617" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+              <span>ОСТАВИТЬ ЗАЯВКУ</span>
+            </a>
           </div>
         </div>
       </div>

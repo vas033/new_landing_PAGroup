@@ -35,7 +35,6 @@ export function NavHeader({ width }: IMyHeader) {
               {navList.map(el =>
                 <button className={styles.navLink} key={navList.indexOf(el)} onClick={() => { onClick(); document.getElementById(el.link)?.scrollIntoView({ behavior: 'smooth' }) }}>
                   <span className={styles.navSpan}>{el.name}</span>
-                  <span className={classNames(styles.navSpan, styles.navBorder)}></span>
                 </button>
               )}
             </nav>

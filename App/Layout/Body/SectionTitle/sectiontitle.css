@@ -102,8 +102,12 @@
         padding: 4.86vw 5.05vw 8.06vw 5.05vw;
     }
     .title {
+        margin-bottom: 100px;
         font-size: 40px;
         line-height: 140%;
+    }
+    .title h1 {
+        margin-bottom: 32px;
     }
     .desc {
         font-size: 18px;
@@ -116,14 +120,24 @@
         margin-right: 8.33vw;
         margin-left: 8.33vw;
     }
+    .sectionTitleAnimation {
+        display: none;
+    }
     .mainContentContainer {
-        padding: 1vw;
+        padding: 0vw;
+        position: unset;
     }
     .desc {
         font-size: 16px;
     }
+    .bottomDiv {
+        width: 102%;
+    }
     .btn span {
         font-size: 14px;
+    }
+    .btn svg {
+        width: 97%;
     }
     @keyframes strokeOffset {
         0% {
@@ -132,5 +146,33 @@
         100% {
             stroke-dashoffset: 107%
         }
+    }
+}
+
+@media(max-width: 767px) {
+    .container {
+        margin-left: 6.33vw;
+        margin-right: 6.33vw;
+    }
+    .title {
+        margin-bottom: 42px;
+        font-size: 28px;
+        line-height: 136%;
+    }
+    .title span {
+        text-transform: lowercase;
+    }
+    .bottomDiv {
+        display: none;
+    }
+    .btn {
+        width: 200px;
+        margin-bottom: 30px;
+    }
+    .btn svg {
+        position: relative;
+    }
+    .btn span {
+        font-size: 14px;
     }
 }

@@ -100,3 +100,22 @@
         margin-right: auto;
     }
 }
+
+@media(max-width: 767px) {
+    .container {
+        padding: 8.33vw 6.33vw;
+    }
+    .worksContainer {
+        flex: 0 0 100%;
+        margin-bottom: 37px;
+    }
+    .hiddenLink {
+        display: none;
+    }
+    .link {
+        padding: unset;
+        width: 100%;
+        font-size: 18px;
+        line-height: 183%;
+    }
+}

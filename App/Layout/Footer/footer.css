@@ -187,3 +187,125 @@
         flex: 0 0 30%;
     }
 }
+
+@media(max-width:1439px) {
+    .container {
+        padding: 21.2vw 8.3vw 12.96vw 8.3vw;
+    }
+    .title,
+    .hiddenLink {
+        font-size: 50px;
+        line-height: 120%;
+    }
+    .infoContainer,
+    .nav {
+        flex: 1 0 50%;
+    }
+    .infoContainer {
+        margin-bottom: 64px;
+        font-size: 24px;
+    }
+    .linkContainer {
+        line-height: 150%;
+    }
+    .firmTaxInfo {
+        flex-direction: row;
+        justify-content: left;
+    }
+    .firmTaxInfo,
+    .nav {
+        line-height: 240%;
+    }
+    .firmInfo:first-child {
+        margin-right: 32px;
+    }
+    .infoNav {
+        flex-wrap: wrap;
+    }
+    .nav {
+        font-size: 20px;
+    }
+    .navLinks {
+        flex: 1 0 33%;
+    }
+    .navLinks:first-child {
+        margin-bottom: 24px;
+    }
+    .lisence {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 8.33vw 6.33vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .container,
+    .infoContainer,
+    .firmTaxInfo,
+    .nav {
+        align-items: center;
+        justify-content: center;
+    }
+    .title,
+    .hiddenLink {
+        font-size: 28px;
+        line-height: 214%;
+        text-align: center;
+    }
+    .title {
+        margin-bottom: 8px;
+    }
+    .hiddenLinkContainer {
+        margin-bottom: 17.9vw;
+    }
+    .linkContainer,
+    .navLinks,
+    .firmInfo {
+        font-size: 18px;
+    }
+    .linkContainer {
+        margin-bottom: 32px;
+        line-height: 100%;
+    }
+    .infoContainer {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 48px;
+    }
+    .firmTaxInfo {
+        flex-direction: column;
+    }
+    .firmInfo,
+    .navLinks {
+        line-height: 156%;
+    }
+    .firmInfo:first-child {
+        margin-right: unset;
+        margin-bottom: 12px;
+    }
+    .nav {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .navLinks {
+        flex: unset!important;
+    }
+    .navLinks:first-child {
+        margin-bottom: unset;
+    }
+    .navLinks:not(:last-child) {
+        margin-bottom: 12px;
+    }
+    .lisence {
+        text-align: center;
+    }
+    .line2 {
+        left: -117%;
+    }
+    .line3 {
+        left: -290%;
+    }
+}

@@ -131,3 +131,19 @@
         right: -31%;
     }
 }
+
+@media(max-width: 767px) {
+    .container {
+        padding: 13.67vh 6.33vw 5.58vh 6.33vw;
+    }
+    .content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .content>div {
+        flex: 0 0 45%;
+    }
+    .content>div:last-child {
+        margin-bottom: 32px;
+    }
+}

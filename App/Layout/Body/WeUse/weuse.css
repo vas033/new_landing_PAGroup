@@ -38,6 +38,31 @@
         margin-right: 32px;
     }
     .listContainer>div:not(:nth-child(n+5)) {
+        margin-bottom: unset;
+    }
+    .listContainer>div:not(:nth-child(n+5)) {
         margin-bottom: 60px;
+    }
+}
+
+@media(max-width: 1439px) {
+    .listContainer div {
+        flex: 1 0 50%;
+    }
+    .listContainer>div:not(:nth-child(n+6)) {
+        margin-bottom: 64px;
+    }
+}
+
+@media(max-width: 767px) {
+    .container {
+        padding: 8.33vw 6.33vw;
+    }
+    .title {
+        margin-bottom: 32px;
+    }
+    .listContainer {
+        height: 205px;
+        overflow-y: scroll;
     }
 }
