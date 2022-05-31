@@ -13,7 +13,8 @@ import navList from './arrays/navHeader';
 
 export function Layout() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  
+  const [progressLineWidth, setProgressLineWidth] = useState(0);
+
   function removeActive() {
     const header = document.querySelectorAll(`header nav .${navStyle.active}`);
     header.forEach(el => el.classList.remove(navStyle.active))
@@ -31,6 +32,7 @@ export function Layout() {
     arr.forEach((el, i) => {
       if (scrollPos === el) {
         activeNav(links[i])
+        setProgressLineWidth(120 * (i + 1))
       }
     })
   }
@@ -56,7 +58,7 @@ export function Layout() {
     <div className={styles.container} onScroll={(e) => {
       currentTab(coords, links, e.currentTarget.scrollTop)
     }}>
-      <Header width={windowWidth} />
+      <Header width={windowWidth} lineWidth={progressLineWidth} />
       <SectionTitle width={windowWidth} />
       <WhatWeDo width={windowWidth} />
       <Portfolio width={windowWidth} />

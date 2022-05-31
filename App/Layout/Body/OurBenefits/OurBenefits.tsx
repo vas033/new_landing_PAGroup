@@ -15,7 +15,7 @@ export function OurBenefits() {
       <div className={styles.line1}>
 
         <svg xmlns="http://www.w3.org/2000/svg" width="1922" height="355" viewBox="0 0 1922 355" fill="none">
-          <path d="M1921 353 H1415 L908 1 H0 " stroke="#3D67FF" strokeOpacity="0.3"/>
+          <path d="M1921 353 H1415 L908 1 H0 " stroke="#3D67FF" strokeOpacity="0.3" />
         </svg>
 
         <div className={styles.line1anim}>
